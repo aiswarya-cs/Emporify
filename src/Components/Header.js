@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from 'react-redux';
-import { UseSelector } from 'react-redux';
+import DropDown from './DropDwon';
+
+
 const Header = () => {
    const cartItems= useSelector( store=>store.cart.items);
    console.log(cartItems);
+
+   
 
   return (
     <div>
@@ -15,12 +19,14 @@ const Header = () => {
   </div>
   <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto ">
     <div className="text-sm lg:flex-grow mx-60 lg:my-1">
+    
       <Link to="/" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mr-4">
        Home
       </Link>
-      <Link to="/category" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mr-4">
-        Categories
+      <Link to="" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mr-4">
+        <DropDown/>
       </Link>
+     
       <Link to="/products" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black">
        Products
       </Link>

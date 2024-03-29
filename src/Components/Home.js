@@ -23,20 +23,20 @@ const Home = () => {
     }
   };
 
-  if (loading) {
-    return <div className='text-center'>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div className='text-center'>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   return (
     <div className='flex flex-wrap justify-center my-5'>
-       <h2 className="w-10/12 text-4xl text-center mb-5 my-5 italic text-yellow-900 font-semibold">Our Store</h2>
+       <h2 className="w-10/12 text-4xl text-start mb-5 my-5 italic text-yellow-900 font-semibold">Top Categories</h2>
       {category.map((item) => (
         
-        <div key={item.id} className="max-w-[250px] mx-h-[280px] rounded-xl overflow-hidden shadow-lg mx-4 my-5">
+        <div key={item.id} className="max-w-[180px] mx-h-[180px] rounded-xl overflow-hidden shadow-lg mx-6 my-5">
           <img className="w-full bg-cover bg-center" src={item?.image} alt="Product" />
           <div className="px-6 py-4">
             <h1 className='text-2xl text-rose-900 font-semibold text-center'>{item.name}</h1>

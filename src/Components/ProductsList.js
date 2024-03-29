@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { All_Products } from '../utils/Config';
-import { IoIosHeartEmpty } from "react-icons/io";
+import { IoMdHeart } from "react-icons/io";
 import { Link } from 'react-router-dom'; 
 
 
@@ -14,10 +14,10 @@ const ProductsList = ({setHideandshow}) => {
 
   useEffect(() => {
     getVideos();
-    setHideandshow(false);
-        return () => {
-            setHideandshow(true);
-        }
+    // setHideandshow(false);
+    //     return () => {
+    //         setHideandshow(true);
+    //     }
   }, [setHideandshow]);
 
   const getVideos = async () => {
@@ -30,10 +30,11 @@ const ProductsList = ({setHideandshow}) => {
 
   return (
     <>
-    <h2 className="text-6xl ml-36 text-gray-400 mb-10 my-5 italic text-left font-extrabold">Search.....</h2>
+    <div className='w-[80%] h-[.25px] bg-gray-400 mx-[8%]'/>
+    {/* <h2 className="text-6xl ml-36 text-gray-400 mb-10 my-5 italic text-left font-extrabold">SHOP</h2> */}
    <div className='my-5'>
    <input
-          className='w-[500px] h-[50px] border border-gray-400 p-2  focus:border-blue-800 items-center ml-72 rounded-lg'
+          className='w-[500px] h-[40px] border border-gray-400 p-2  focus:border-blue-800 items-center ml-72 rounded-lg'
           type='text'
           placeholder=' Type here..'
           value={search}
@@ -42,7 +43,7 @@ const ProductsList = ({setHideandshow}) => {
            }}
 
         />
-        <button className='text-white border-gray-400 p-2 rounded-lg w-[200px] h-[50px] bg-yellow-800 border-0 ml-4  -mt-2 hover:bg-red-900'
+        <button className='text-white border-gray-400 p-2 rounded-lg w-[200px] h-[41px] bg-yellow-800 border-0 ml-4  -mt-2 hover:bg-red-900'
           onClick={()=>{
             const data=filterData(search,products);
             setFilterItems(data)
@@ -54,7 +55,7 @@ const ProductsList = ({setHideandshow}) => {
     
     <div className="flex flex-wrap justify-center">
     {filteritems.length === 0 ? (
-          <p className="text-center text-red-600 text-xl">Wait.....</p>
+          <p className="text-center text-red-600 text-xl">Product not found</p>
         ) : (
       filteritems.map((item, id) => (
         <div key={id} className="max-w-xs mx-h-[280px] rounded overflow-hidden shadow-lg mx-4 my-5">
@@ -65,7 +66,7 @@ const ProductsList = ({setHideandshow}) => {
               <span className='flex'>
                 <p className="text-gray-700 text-xl"><span className='text-2xl text-green-900 font-bold'>$</span>{item.price}</p>
                 <p>
-                  <IoIosHeartEmpty className='mx-3 my-2 text-2xl ml-52 hover:bg-red-800 rounded-full cursor-pointer'/>
+                  <IoMdHeart  className='mx-3 text-gray-500 my-2 text-2xl ml-52 hover:text-red-800 rounded-full cursor-pointer'/>
                 </p>
               </span>
             </div>

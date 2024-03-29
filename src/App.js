@@ -11,6 +11,8 @@ import UserList from './Components/UserList';
 import { Provider } from 'react-redux';
 import store from './utils/Store';
 import Cart from './Components/Cart';
+import Banner from './Components/Banner';
+import ProductsMenu from './Components/ProductsMenu';
 
 function App() {
   const [hideandshow, setHideandshow] = useState(true);
@@ -21,11 +23,13 @@ function App() {
         <Header/>
         {hideandshow ?(
           <>
-        <Home/>
+          <Banner/>
+          <Home/>
+          <ProductsList/>
         </>
         ):null}
         <Routes>
-          <Route path='/products' element={<ProductsList setHideandshow={setHideandshow}/>}/>
+          <Route path='/products' element={<ProductsMenu setHideandshow={setHideandshow}/>}/>
           <Route path='/category' element={<Category setHideandshow={setHideandshow}/>}/>
           <Route path='/products/:category/:productId' element={<DetailedPage setHideandshow={setHideandshow}/>}/>
           <Route path='/users' element={<UserList setHideandshow={setHideandshow}/>}/>
