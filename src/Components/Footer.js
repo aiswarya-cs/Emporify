@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div>
 
-<footer className="bg-white">
-  <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-4 lg:px-8">
+<footer className="bg-gray-300">
+  <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-10 sm:px-6 lg:space-y-4 lg:px-8">
     <div className="sm:flex sm:items-center sm:justify-between">
     {/* // <div className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
         
@@ -20,19 +20,19 @@ const Footer = () => {
 
         <ul className="mt-6 space-y-4 text-sm">
           <li>
-            <a href="#" className="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+            <a href="#" className="text-gray-700 transition hover:opacity-75"> Online payment </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-700 transition hover:opacity-75"> Company Review </a>
+            <a href="#" className="text-gray-700 transition hover:opacity-75">Products</a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+            <a href="#" className="text-gray-700 transition hover:opacity-75">Cash On Delivery</a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
+            <a href="#" className="text-gray-700 transition hover:opacity-75"> Free Shipping </a>
           </li>
 
           <li>
@@ -94,13 +94,13 @@ const Footer = () => {
           </li>
 
           <li>
-            <a href="#" className="text-gray-700 transition hover:opacity-75"> Hiring Statistics </a>
+            <a href="#" className="text-gray-700 transition hover:opacity-75"> Customers </a>
           </li>
         </ul>
       </div>
     </div>
 
-    <p className="text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+    <p className="text-xs text-gray-500">&copy; 2024. Empority. All rights reserved.</p>
   </div>
 </footer>
 
