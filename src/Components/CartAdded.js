@@ -20,13 +20,13 @@ const CartAdded = () => {
   }
   return (
     <div>
-         {contextHolder}
+         {/* {contextHolder}
          <Space>
         <button className='mx-10 w-[80px] h-[40px] -mt-2 bg-green-600 rounded-lg hover:bg-green-950 text-white' 
         // onClick={handleCLicked}
         onClick={()=>handleAddItem}
         >Add Item</button>
-        </Space>
+        </Space> */}
     </div>
   )
 }

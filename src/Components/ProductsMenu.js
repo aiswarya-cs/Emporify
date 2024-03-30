@@ -55,7 +55,7 @@ const ProductsMenu = ({setHideandshow}) => {
     
     <div className="flex flex-wrap justify-center">
     {filteritems.length === 0 ? (
-          <p className="text-center text-red-600 text-xl">Product not found</p>
+          <p className="text-center text-red-600 text-xl">Loading......</p>
         ) : (
       filteritems.map((item, id) => (
         <div key={id} className="max-w-xs mx-h-[280px] rounded overflow-hidden shadow-lg mx-4 my-5">

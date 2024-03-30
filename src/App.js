@@ -13,6 +13,8 @@ import store from './utils/Store';
 import Cart from './Components/Cart';
 import Banner from './Components/Banner';
 import ProductsMenu from './Components/ProductsMenu';
+import PlaceOrder from './Components/PlaceOrder';
+import OrderConfirm from './Components/OrderConfirm';
 
 function App() {
   const [hideandshow, setHideandshow] = useState(true);
@@ -34,6 +36,8 @@ function App() {
           <Route path='/products/:category/:productId' element={<DetailedPage setHideandshow={setHideandshow}/>}/>
           <Route path='/users' element={<UserList setHideandshow={setHideandshow}/>}/>
           <Route path='/cart' element={<Cart setHideandshow={setHideandshow}/>}/>
+          <Route path='/order' element={<PlaceOrder setHideandshow={setHideandshow}/>}/>
+          <Route path='/orderconfirm' element={<OrderConfirm setHideandshow={setHideandshow}/>}/>
           
         </Routes>
         <Footer/>
