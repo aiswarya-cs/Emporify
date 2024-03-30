@@ -18,7 +18,7 @@ const Header = () => {
     <span className="font-bold text-2xl tracking-tight text-slate-800 pl-40 font-serif italic">Emporify</span>
   </div>
   <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto ">
-    <div className="text-sm lg:flex-grow mx-60 lg:my-1">
+    <div className="text-sm lg:flex-grow lg:mx-56 lg:my-1">
     
       <Link to="/" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mr-4">
        Home
@@ -27,13 +27,13 @@ const Header = () => {
         <DropDown/>
       </Link>
      
-      <Link to="/products" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black">
-       Products
+      <Link to="/products" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black">Products
       </Link>
-      <Link to="/users" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mx-2">
+      
+      <Link to="/users" className="block mt-4 lg:inline-block lg:mt-0 text-lg font-semibold text-red-700 hover:text-black mx-3">
         Users
       </Link>
-      <Link to="/cart" className="block mt-4 lg:inline-block ml-40 lg:mt-0 text-lg font-semibold text-red-700 hover:text-black">
+      <Link to="/cart" className="block mt-4 lg:inline-block ml-44 lg:mt-0 text-lg font-semibold text-red-700 hover:text-black">
       <span className='flex mt-1'><FaCartShopping className='mx-1 mt-1'/>{cartItems.length}</span>
       </Link>
 
